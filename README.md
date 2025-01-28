@@ -2,6 +2,15 @@
 
 Some config for using manjaro as my main workspace
 
+## Terminal
+Create a bash in ~/.local/bin/terminal.
+
+```
+#!/bin/sh
+
+alacritty $@
+```
+Note : permission -> -rwxr-xr-x
 ## Picom
 
 ```
