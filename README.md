@@ -1,43 +1,42 @@
-# My Manjaro with Sway Config
+# My Manjaro with i3
 
 Some config for using manjaro as my main workspace
 
-## Visual Studio Code
-
-There is a bug in opening vscode in manjaro sway version, as the electron can't work properly in wayland.
-The solution is to set some initial config in vscode settings.json.
+## Picom
 
 ```
-{
-    "window.titleBarStyle": "custom"
-}
-```
+#################################
+#
+# Opacity
+#
+#################################
 
-## Fonts
+inactive-opacity = 0.80;
+active-opacity = 0.80;
+frame-opacity = 0.80;
 
-For better rendering Persian characters in manjaro ui and apps, we should intall some third-party opensource fonts.
-And we also have to set fonts.conf in fontconfig folder.
+opacity-rule = [
+    #"100:name *= 'Chrome'",
+    "99:class_g = 'Google-chrome'"
+];
 
-```
-<alias>
-  <family>sans-serif</family>
-  <prefer>
-   <family>Vazirmatn</family>
-  </prefer>
- </alias>
-```
+inactive-opacity-override = false;
 
-Fonts can be installed in .local/share/fonts.
+# Dim inactive windows. (0.0 - 1.0)
+# inactive-dim = 0.2;
+# Do not let dimness adjust based on window opacity.
+# inactive-dim-fixed = true;
+# Blur background of transparent windows. Bad performance with X Render backend. GLX backend is preferred.
+blur-background = true;
+# Blur background of opaque windows with transparent frames as well.
+blur-background-frame = true;
+# Do not let blur radius adjust based on window opacity.
+blur-background-fixed = false;
+blur-background-exclude = [
+    "window_type = 'dock'",
+    "window_type = 'desktop'",
+    "class_g = 'Google-chrome'"
+];
 
-## Keyboard
-
-To add persian layout for keyboard, there is this config file.
-
-```
-input * {
-    xkb_options grp:win_space_toggle,grp_led:caps
-    xkb_layout "us,ir"
-    xkb_variant ","
-    xkb_numlock "enable"
-}
+#################################
 ```
