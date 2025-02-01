@@ -49,3 +49,7 @@ blur-background-exclude = [
 
 #################################
 ```
+
+## dotnet
+dotnet3.1 : openssl1.1 - yay openssl-1.1 
+dotnet3.1 : libicu70 - yay icu70
