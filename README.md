@@ -2,6 +2,13 @@
 
 Some config for using manjaro as my main workspace
 
+## pacman to use local nexus
+
+Add the homelab.conf to your pacman.conf and comment other sections.
+
+```
+Include = /etc/pacman.d/homelab.conf
+```
 ## Visual Studio Code
 
 There is a bug in opening vscode in manjaro sway version, as the electron can't work properly in wayland.
