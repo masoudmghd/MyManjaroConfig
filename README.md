@@ -55,3 +55,11 @@ To set default browser to microsoft edge
 ```
 xdg-settings set default-web-browser microsoft-edge.desktop
 ```
+
+## Microsoft Edge Problems with WayLand
+
+Edit the edge flags config file. Please be ware that the default config file is a link to ~/.config/chrome-flags.conf.
+
+```
+--ozone-platform=x11
+```
