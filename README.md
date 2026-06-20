@@ -48,3 +48,10 @@ input * {
     xkb_numlock "enable"
 }
 ```
+
+## Default Browser
+To set default browser to microsoft edge
+
+```
+xdg-settings set default-web-browser microsoft-edge.desktop
+```
